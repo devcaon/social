@@ -12,8 +12,8 @@ const Login = () => {
         </div>
         <div className="right">
           <form>
-            <input type="text" placeholder="usuário ou email" />
-            <input type="email" placeholder="email" />
+            <input type="text" placeholder="Usuário ou email" />
+            <input type="password" placeholder="Senha" />
             <button>Entrar</button>
           </form>
         </div>

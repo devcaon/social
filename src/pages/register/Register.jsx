@@ -1,8 +1,26 @@
-import "./register.scss"
+import "./register.scss";
 
 const Register = () => {
   return (
-    <div className='register'>Register</div>
+    <div className="register">
+      <div className="card">
+        <div className="left">
+          <h1>Lama Social.</h1>
+          <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+          <span>Você tem uma conta ?</span>
+          <button>Faça login</button>
+        </div>
+        <div className="right">
+          <form>
+            <input type="text" placeholder="Usuário" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Senha" />
+            <input type="text" placeholder="Nome" />
+            <button>Inscrever-se</button>
+          </form>
+        </div>
+      </div>
+    </div>
   )
 }
 
