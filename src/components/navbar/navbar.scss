@@ -1,59 +1,66 @@
+@import "../../style.scss";
+
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  height: 50px;
-  border-bottom: 1px solid lightgray;
-
-  .left{
+  @include themify($themes) {
     display: flex;
     align-items: center;
-    gap: 30px;
-
-    span {
-      font-weight: bold;
-      color: darkblue;
-      font-size: 25px;
-    }
-
-    .search {
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+    border-bottom: 1px solid themed("border");
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+  
+    .left{
       display: flex;
       align-items: center;
-      gap: 10px;
-      border: 1px solid lightgrey;
-      border-radius: 5px;
-      padding: 5px;
-
-      input {
-        border: none;
-        width: 500px;
-        outline: none;
-      }
-    }
-  }
-
-  .right{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-    .user {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 500;
-      cursor: pointer;
-      
-      img {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
+      gap: 30px;
+  
       span {
+        font-weight: bold;
+        color: themed("logo");
+        font-size: 25px;
+      }
+  
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid themed("border");
+        border-radius: 5px;
+        padding: 5px;
 
+  
+        input {
+          border: none;
+          width: 500px;
+          outline: none;
+          background-color: transparent;
+          color: themed("textColorSoft")
+        }
+      }
+    }
+  
+    .right{
+      display: flex;
+      align-items: center;
+      gap: 30px;
+  
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
       }
     }
   }

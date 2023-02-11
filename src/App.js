@@ -1,3 +1,4 @@
+import "./style.scss"
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import {
@@ -19,11 +20,13 @@ function App() {
 
   const Layout = () => {
     return (
-      <div>
+      <div className='theme-dark'>
         <Navbar />
         <div style={{ display: "flex" }}>
           <Leftbar />
-          <Outlet />
+          <div style={{flex: 6}}>
+            <Outlet />
+          </div>
           <Rightbar />
         </div>
       </div>
